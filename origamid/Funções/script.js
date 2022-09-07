@@ -22,7 +22,7 @@ function imc(peso, altura) {
     const imc = peso / (altura * altura);   //Parâmetros
     return  imc;
 }
-console.log(imc(69, 1.69))              //Argumentos
+console.log(imc(47, 1.53))              //Argumentos
 
 //Parênteses executa a função
 function corFavorita(cor) {
@@ -73,7 +73,7 @@ function terceiraIdade(idade) {
 }
 //Ideal é que uma função retorne só um tipo de dado
 
-console.log(terceiraIdade('testeds'));
+console.log(terceiraIdade(123));
 
 //Escopo oque está dentro não sai 
 function faltaVisitar(paisesVisitados) {

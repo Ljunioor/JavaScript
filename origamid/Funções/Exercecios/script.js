@@ -10,7 +10,7 @@ function perimetro(lado) {
     return lado + lado + lado + lado
 
 }
-console.log( perimetro(300));
+console.log( perimetro(37));
 
 //Crie uma função que retorne o seu nome completo 
 function nomeCompleto (nome, sobrenome) {
@@ -28,7 +28,7 @@ function numeroPar(numero) {
         return false;
     }    
 }
-console.log(numeroPar());
+console.log(numeroPar(17));
 
 //Crie uma função que retorne o tipo de dado do argumento passado nela (typeof)
 function tipoDeDado(dado) {
@@ -53,12 +53,13 @@ addEventListener('scroll', function(){
 */
 const totalPaises = 193;
 function precisoVisitar(paisesVisitados) {
-    return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
+    //return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
+     return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
 }
 
     function jaVisitei(paisesVisitados) {
         return `Já Visitei ${paisesVisitados} do total de ${totalPaises} países`;
 }
 
-console.log(precisoVisitar(2))
+console.log(precisoVisitar(0))
 console.log(jaVisitei(2))
