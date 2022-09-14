@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab1 */
+.tab1 {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: #F4F7FB;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* Style the buttons inside the tab1 */
+.tab1 .button1 {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  min-width:25%;
+  transition: 0.3s;
+  font-size: 17px;
+  text-align: center;
+  align-items: center;
+  border-right: 1px solid #ddd;
+  font-family: Poppins, Helvetica, sans-serif;
+}
+
+/* Change background color of buttons on hover */
+.tab1 .button1:hover {
+  background-color: #0082D8;
+}
+
+/* Create an active/current tablink class */
+.tab1 .button1.active {
+  background-color: #0082D8;
+  transition: .4s;
+  text-align: center;
+  align-items: center; 
+}
+
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* Style the tab1 content */
+.tabcontent1 {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  animation:up 2s;
+  text-align: left;
+  align-items: center;
+  background-color: #F4F7FB;
+  border-radius: 0px 0px 5px 5px;
+  font-family:'Poppins', Poppins, sans-serif ;
+  font-size: 17px;
+  
+}
+</style>
+</head>
+<body>
+
+<div class="tab1">
+  <button class="tablinks button1" onclick="openCity(event, 'SEO')">SEO</button>
+  <button class="tablinks button1" onclick="openCity(event, 'google')">Google ADS</button>
+  <button class="tablinks button1" onclick="openCity(event, 'face')">Facebook ADS</button>
+  <button class="tablinks button1" onclick="openCity(event, 'email')">E-mail marketing</button>
+</div>
+
+<div id="SEO" class="tabcontent1">
+  <h3>SEO</h3>
+  <p>O SEO bem executado, agiliza a sua página, faz o usuario permanecer mais tempo e ter uma expêriecia melhor e tudo para você levar seu site ao topo do Google!</p>
+</div>
+
+<div id="google" class="tabcontent1">
+  <h3>Google ADS</h3>
+  <p>Google Ads, é o principal serviço de publicidade da Google, é aqui onde você aparece quando esta bem rankeado e com uma boa configuração em seus anuncios</p> 
+</div>
+
+<div id="face" class="tabcontent1">
+  <h3>Facebook ADS</h3>
+  <p>A publicidade em redes sociais, passando pelos principais mecanismos atuais como: FAcebook e Instagram.</p>
+  
+</div>
+
+<div id="email" class="tabcontent1">
+    <h3>E-mail marketing</h3>
+    <p>O envio de emails, são uma importante área de contato entre você e o seu cliente.  <br>Usando um email com a sua marca você realiza mais negócios, comunica-se de maneira profissional e gera a segurança que todo o cliente deseja..</p>
+    
+  </div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent1, tablinks;
+  tabcontent1 = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent1.length; i++) {
+    tabcontent1[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html>
