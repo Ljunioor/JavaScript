@@ -7,7 +7,7 @@ console.log(mes);
 
 const leonardo = document.getElementById('leonardo').classList;
 
-if(mes <= 10){
+if(mes >= 10){
     console.log('DATA MAIOR')
     //aqui ele remove
     leonardo.add('desactive')
