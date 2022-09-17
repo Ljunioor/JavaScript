@@ -1,28 +1,20 @@
 date = new Date();
 console.log(date)
 
-var mes = date.getMonth();
+var mes = date.getMonth() + 1;
 console.log(mes);
-
-
-var time = date.getTime();
-console.log(time + ' time');
-
 
 
 const leonardo = document.getElementById('leonardo').classList;
 
-if(mes >= 10){
+if(mes <= 10){
     console.log('DATA MAIOR')
     //aqui ele remove
-    leonardo.remove('desactive')
+    leonardo.add('desactive')
 } else {
     //aqui ele add none
-    leonardo.add('desactive')
+    leonardo.remove('desactive')
     console.log('DATA MENOR')
 }
 
 //const leonardo = document.getElementsByClassName('leonardo');
-    
-    
-    
