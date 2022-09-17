@@ -1,6 +1,8 @@
-const date = new Date();
-console.log(new Date());
+date = new Date();
+console.log(date)
 
+var mes = date.getMonth();
+console.log(mes);
 
 
 var time = date.getTime();
@@ -10,7 +12,7 @@ console.log(time + ' time');
 
 const leonardo = document.getElementById('leonardo').classList;
 
-if(date >= 0000){
+if(mes >= 10){
     console.log('DATA MAIOR')
     //aqui ele remove
     leonardo.remove('desactive')
