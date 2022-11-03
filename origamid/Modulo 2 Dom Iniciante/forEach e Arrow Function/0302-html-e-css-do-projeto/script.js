@@ -1,61 +1,34 @@
-// primeira e mais comum getElementById
+const imgs =document.querySelectorAll('img');
+console.log(imgs);
 
-const animaisSection = document.getElementById('animais');
-const contatoSection = document.getElementById('contato');
+let i = 0;
 
-//se se slecionar algo que não exista ele retorna null
-const naoExiste = document.getElementById('hsuhsuhus')
-console.log(naoExiste)
+//forEach cria Arrays
 
-//Classe de Lista ao vivo
-const gridSection = document.getElementsByClassName('grid-section');
-const contato = document.getElementsByClassName('grid-section contato'); //só os que possuirem as duas classes
+imgs.forEach(function(item, index, array){
+   // console.log(i++);
+  // console.log(item, index, array);
+});
 
-//seleciona todos
-const ul = document.getElementsByTagName('ul');
+//Array like n é uma array, mas da pra transformar
+const titulos = document.getElementsByClassName('titulo');
+const titulosArray = Array.from(titulos);
 
-//retorna o primeiro elemento
-console.log(gridSection[0]);
-console.log(gridSection.length)
+console.log(titulos);//Like a array
+console.log(titulosArray);//Array
 
-//Seletor Geral Único
+titulosArray.forEach(function(item){
+    console.log(item)
+});
 
-//querySelector : retorna o peimrio elemento que combinar com o seu seletor CSS
-const animais = document.querySelector('.animais');
-
-const primeiraLi = document.querySelector('li');
-console.log(primeiraLi)
-
-const primeiraUl =document.querySelector('ul');
-console.log(primeiraUl);
-
-//links internos
-const linksInternos = document.querySelector('[href^="#"]');
-console.log(linksInternos);
-console.log(linksInternos.href);
-
-//querySelectorAll
-const animaisImg = document.querySelectorAll('.animais img');
-console.log(animaisImg)
-
-const gridSectionHTML = document.getElementsByClassName('grid-section');
-const gridSectionNode = document.querySelectorAll('.grid-section');
-
-primeiraUl.classList.add('grid-section')
-
-//Esse é ao vivo ele adiciona 4 elementos esse novo 
-console.log(gridSectionHTML);
-
-//Esse é estatico continua com a mesma quantidade que tinha antes rodar o script
-console.log(gridSectionNode);
-
-//Array-Like
-gridSectionNode.forEach(function(item, index){
+//Arrow Functions => remove a palavra function e adiciona flecha ao fim;
+let imgsA = imgs;
+imgsA.forEach((item)=>{
     console.log(item);
 });
-const arrayGrid = Array.from(gridSectionHTML);
-console.log(arrayGrid)
 
-arrayGrid.forEach(function(item){
-    console.log(item)
-})
+//atalhos
+//imgs.forEach(() => {console.log(i++)});
+imgs.forEach(function(){console.log(i++)});//longo
+imgs.forEach(() => console.log(i++));//so pega com uma linha interna
+
