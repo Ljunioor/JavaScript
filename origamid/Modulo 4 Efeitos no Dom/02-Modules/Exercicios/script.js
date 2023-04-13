@@ -10,12 +10,15 @@ if(tabMenu.length &&tabContent.length){
         tabContent.forEach((section) =>{
             section.classList.remove('ativo')
         })
-
-        tabContent[index].classList.add('ativo')
+        console.log(tabContent[index].dataset.anime);
+        const direcao = tabContent[index].dataset.anime
+        tabContent[index].classList.add('ativo',direcao);
+        
     };
     tabMenu.forEach((itemMenu, index) =>{
         itemMenu.addEventListener('click', function(){
             activeTab(index);
+            
         })
     });
 }
