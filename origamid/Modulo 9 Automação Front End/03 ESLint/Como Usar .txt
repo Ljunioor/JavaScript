@@ -1,0 +1,6 @@
+no npm terminal bash
+instala o:
+npm install eslint -g (isntala global é assim que funciona)
+
+ai ou executa isso ou isntala um plugin no vscode
+node_modules/.bin/eslint script.js 

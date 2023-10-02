@@ -1,0 +1,7 @@
+https://www.npmjs.com/
+
+
+no terminal  Git bash do vscode 
+
+npm init ( abre aquele json de config para sites)
+npm install ( instala tudo oque tiver na pasta de config para o site pegar)
